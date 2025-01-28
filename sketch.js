@@ -54,8 +54,6 @@ function draw() {
       rect(i * rectWidth, row * rectHeight, rectWidth, rectHeight);
     }
   }
-
-
    noStroke();
 }
 

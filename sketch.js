@@ -55,37 +55,12 @@ function draw() {
     }
   }
 
-  // 문자열 위치 설정 및 그리기
-  if (!charDisplayed) {
-    initializeCharPositions();
-    charDisplayed = true;
-  }
 
-  // 텍스트 렌더링
-  fill(255); // 텍스트 색상 (밝은 색)
-  noStroke();
-  for (let i = 0; i < charPositions.length; i++) {
-    let pos = charPositions[i];
-    text(pos.char, pos.x, pos.y);
-  }
-}
-
-// 문자열 위치 초기화
-function initializeCharPositions() {
-  let gridSize = 50; // 각 문자 위치를 배치할 간격
-  let startX = (windowWidth - string.length * gridSize) / 2; // 시작 X 좌표 (중앙 정렬)
-  let startY = windowHeight / 2; // Y 좌표는 화면 중앙
-
-  for (let i = 0; i < string.length; i++) {
-    charPositions.push({
-      char: string[i],
-      x: startX + i * gridSize, // 문자 간격 설정
-      y: startY
-    });
-  }
+   noStroke();
 }
 
 // 커스텀 fillGradient 함수 (필요 시 작성 또는 구현)
 function fillGradient(type, options) {
   console.log(`Gradient Type: ${type}, Options:`, options);
 }
+

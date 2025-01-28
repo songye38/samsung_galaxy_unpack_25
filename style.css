@@ -9,7 +9,7 @@ canvas {
 .center-text {
   color: #FFF; /* 텍스트 색상 */
   font-family: Questrial, sans-serif; /* 폰트 패밀리 */
-  font-size: 3.6rem; /* 폰트 크기 */
+  font-size: 6vw; /* 화면 너비의 6% 크기 */
   font-style: normal; /* 기울임 없음 */
   font-weight: 400; /* 기본 두께 */
   line-height: normal; /* 기본 라인 높이 */

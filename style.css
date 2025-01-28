@@ -2,6 +2,17 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+body {
+  margin: 0;
+  background-color: #000; /* 검정 배경 */
+  overflow: hidden; /* 스크롤 방지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 canvas {
   display: block;
 }

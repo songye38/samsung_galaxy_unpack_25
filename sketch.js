@@ -6,6 +6,28 @@ let string = "SAMSUNG GALAXY UNPACK 25"; // 표시할 문자열
 let charPositions = []; // 문자열의 문자 위치 배열
 let charDisplayed = false; // 문자 위치가 설정되었는지 확인
 
+
+
+function adjustText() {
+  const textElement = document.getElementById("center-text");
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth <= 768) {
+      // 모바일 화면: 텍스트를 두 줄로 나눔
+      textElement.innerHTML = "Samsung Galaxy<br>Unpack 25";
+      textElement.style.fontSize = "8vw"; // 모바일에서 글씨 크기 키우기
+  } else {
+      // 큰 화면: 텍스트를 한 줄로 표시
+      textElement.innerHTML = "Samsung Galaxy Unpack 25";
+      textElement.style.fontSize = "6vw";
+  }
+}
+
+// 초기 화면 설정 및 리사이즈 이벤트 연결
+window.addEventListener("load", adjustText);
+window.addEventListener("resize", adjustText);
+
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   x = 0;
